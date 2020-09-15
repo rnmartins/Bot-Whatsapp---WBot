@@ -7,8 +7,11 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://web.whatsapp.com/')
 time.sleep(20)
 
-contatos = ['MHR - Suporte Organizado', 'Nadia Martins', 'TI - SUD']
-mensagem = 'Testando bot WPP'
+# Grupo ou Contatos
+contatos = []
+
+# Mensagem a ser enviada
+mensagem = ''
 
 def localizar_contato(contato):
     campo_pesquisa = driver.find_element_by_xpath('//div[contains(@class, "copyable-text selectable-text")]')
